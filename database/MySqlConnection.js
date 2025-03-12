@@ -1,13 +1,13 @@
 const { Sequelize } = require('sequelize')
 
 const bdmysql = new Sequelize(
-  'test',
-  'root',
-  '',
+  'railway',
+  process.env.RAILWAY_BD_USER,
+  process.env.RAILWAY_BD_PASSWORD,
   {
-    host: 'localhost',
-    port: '3306',
-    dialect: 'mariadb'
+    host: process.env.RAILWAY_BD_HOST,
+    port: process.env.RAILWAY_BD_PORT,
+    dialect: 'mysql'
   }
 )
 
