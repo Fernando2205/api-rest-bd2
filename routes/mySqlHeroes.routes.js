@@ -11,7 +11,7 @@ const {
   // pruebaPut,
   // pruebaDelete,
   // pruebaPatch
-} = require('../controllers/heroes.controller')
+} = require('../controllers/MySqlHeroes.controller')
 
 const router = Router()
 

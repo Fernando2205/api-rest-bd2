@@ -7,7 +7,7 @@ const {
   protagonistasPost,
   protagonistaPut,
   protagonistaDelete
-} = require('../controllers/protagonistas.controller')
+} = require('../controllers/MySqlProtagonistas.controller')
 
 const router = Router()
 
