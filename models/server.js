@@ -2,8 +2,8 @@ const express = require('express')
 const cors = require('cors')
 
 const { bdmysql } = require('../database/MySqlConnection')
-const { dbConnectionMongo } = require('../database/MongoConnection')
-const { dbConnectionNeo4j } = require('../database/Neo4jConnection')
+// const { dbConnectionMongo } = require('../database/MongoConnection')
+// const { dbConnectionNeo4j } = require('../database/Neo4jConnection')
 
 class Server {
   constructor () {
@@ -85,13 +85,13 @@ class Server {
     }
   }
 
-  async conectarMongo () {
-    await dbConnectionMongo()
-  }
+  // async conectarMongo () {
+  //   await dbConnectionMongo()
+  // }
 
-  async conectarNeo () {
-    await dbConnectionNeo4j()
-  }
+  // async conectarNeo () {
+  //   await dbConnectionNeo4j()
+  // }
 
   routes () {
     // Rutas de autenticación MySQL
