@@ -24,12 +24,10 @@ const crearCuenta = async (req, res = response) => {
       password: passwordHash,
       rol
     });
-    // Generar JWT
-    const token = await generarJWT(usuario.id);
+    // No generar ni retornar token aquí
     res.json({
       ok: true,
-      usuario,
-      token
+      usuario
     });
   } catch (error) {
     console.log(error);
