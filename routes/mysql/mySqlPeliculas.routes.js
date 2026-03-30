@@ -7,7 +7,7 @@ const {
   peliculaDelete,
   peliculasPut,
   peliculaPost
-} = require('../controllers/MySqlPeliculas.controller')
+} = require('../../controllers/mysql/MySqlPeliculas.controller')
 
 const router = Router()
 

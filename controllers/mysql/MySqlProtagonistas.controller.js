@@ -1,7 +1,7 @@
 const { response, request } = require('express')
-const { Protagonistas } = require('../models/mySqlProtagonistas')
-const { Peliculas } = require('../models/mySqlPeliculas')
-const { Heroes } = require('../models/mySqlHeroes')
+const { Protagonistas } = require('../../models/mySqlProtagonistas')
+const { Peliculas } = require('../../models/mySqlPeliculas')
+const { Heroes } = require('../../models/mySqlHeroes')
 const { Op } = require('sequelize')
 
 const protagonistasGet = async (req, res = response) => {
