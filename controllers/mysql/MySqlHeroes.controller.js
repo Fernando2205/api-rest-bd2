@@ -52,7 +52,7 @@ const heroesComoGet = async (req = request, res = response) => {
 
   try {
     const heroes = await Heroes.findAll({
-      attributes: ['nombre', 'bio'],
+      attributes: ['id','nombre', 'bio','img'],
       where: {
         nombre: {
           [Op.like]: `%${termino}%`
