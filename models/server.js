@@ -63,7 +63,7 @@ class Server {
 
       // Crear tabla usuarios si no existe
       const { MySqlUsuario } = require('../models/mySqlUsuario');
-      await MySqlUsuario.sync();
+      await MySqlUsuario.sync({alter:true});
       console.log('Tabla usuarios sincronizada.');
 
         const { Heroes } = require('../models/mySqlHeroes')

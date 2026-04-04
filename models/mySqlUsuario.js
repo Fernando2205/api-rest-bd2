@@ -21,6 +21,10 @@ const MySqlUsuario = bdmysql.define('usuarios', {
     type: DataTypes.STRING,
     allowNull: false
   },
+  img:{
+    type: DataTypes.STRING,
+    allowNull: true
+  },
   estado: {
     type: DataTypes.BOOLEAN,
     defaultValue: true

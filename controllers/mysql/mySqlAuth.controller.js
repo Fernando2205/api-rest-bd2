@@ -4,7 +4,7 @@ const { generarJWT } = require('../../helpers/generar-jwt');
 const { MySqlUsuario } = require('../../models/mySqlUsuario');
 
 const crearCuenta = async (req, res = response) => {
-  const { nombre, correo, password, rol } = req.body;
+  const { nombre, correo, password, img, rol, } = req.body;
   try {
     // Verificar si el correo ya existe
     const usuarioExiste = await MySqlUsuario.findOne({ where: { correo } });
@@ -22,7 +22,8 @@ const crearCuenta = async (req, res = response) => {
       nombre,
       correo,
       password: passwordHash,
-      rol
+      img,
+      rol,
     });
     // No generar ni retornar token aquí
     res.json({
